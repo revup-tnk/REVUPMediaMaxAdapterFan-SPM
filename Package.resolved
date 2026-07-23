@@ -1,12 +1,12 @@
 {
   "pins" : [
     {
-      "identity" : "applovin-max-swift-package",
+      "identity" : "fbaudiencenetwork",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/AppLovin/AppLovin-MAX-Swift-Package.git",
+      "location" : "https://github.com/facebook/FBAudienceNetwork.git",
       "state" : {
-        "revision" : "b5acf713209298059bb2f09b22d84d523454bc7b",
-        "version" : "13.5.1"
+        "revision" : "0b7bd807fff993055838e6d6a410eddf590c09ac",
+        "version" : "6.21.1"
       }
     }
   ],

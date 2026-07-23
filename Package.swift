@@ -13,27 +13,27 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/AppLovin/AppLovin-MAX-Swift-Package.git", exact: "13.5.1"),
+        .package(url: "https://github.com/facebook/FBAudienceNetwork.git", exact: "6.21.1")
     ],
     targets: [
         .target(
             name: "REVUPMediaMaxAdapterFanTarget",
             dependencies: [
                 .target(name: "REVUPMediaMaxAdapterFan"),
-                .target(name: "FBAudienceNetwork"),
-                .product(name: "AppLovinSDK", package: "AppLovin-MAX-Swift-Package"),
+                .target(name: "AppLovinMediationFacebookAdapter"),
+                .product(name: "FBAudienceNetwork", package: "FBAudienceNetwork"),
             ],
-            path: "Sources"
+            path: "Sources",
         ),
         .binaryTarget(
             name: "REVUPMediaMaxAdapterFan",
-            url: "https://github.com/revup-tnk/REVUP-iOS-SDK/releases/download/1.0.0/REVUPMediaMaxAdapterFan.zip",
-            checksum: "465686dc9cf96c62ba9a3647f1009ac3d116ecf3020b85f62cf1a1c0ab1f2264"
+            url: "https://github.com/revup-tnk/REVUP-iOS-SDK/releases/download/1.1.0/REVUPMediaMaxAdapterFan.zip",
+            checksum: "ebb36030b0e2aa413cb829f15c2b732c2966f1ec8b6f06f52ff61332de83839d"
         ),
         .binaryTarget(
-            name: "FBAudienceNetwork",
-            url: "https://github.com/revup-tnk/REVUP-iOS-SDK/releases/download/1.0.0/FBAudienceNetwork.xcframework.zip",
-            checksum: "584282ccc2121d3d4c51ea69049665695fbf93c2b581a1e07ddb8b9964d3f1d4"
-        ),
+            name: "AppLovinMediationFacebookAdapter",
+            url: "https://artifacts.applovin.com/ios/com/applovin/mediation/facebook-adapter/AppLovinMediationFacebookAdapter-6.21.1.0.zip",
+            checksum: "69069f3c153a9387a355a2e4e9ed322bcc4fcec7b0f5bc80fa9880e9c69c1ccb"
+        )
     ]
 )
