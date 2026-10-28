@@ -5,7 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "REVUPMediaMaxAdapterFan",
-    platforms: [.iOS(.v13)],
+    platforms: [.iOS(.v15)],
     products: [
         .library(
             name: "REVUPMediaMaxAdapterFan",
@@ -13,27 +13,21 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/facebook/FBAudienceNetwork.git", exact: "6.21.1")
+        .package(url: "https://github.com/AppLovin/AppLovin-MAX-Swift-Package-Meta.git", exact: "6220004.0.0"),
     ],
     targets: [
         .target(
             name: "REVUPMediaMaxAdapterFanTarget",
             dependencies: [
                 .target(name: "REVUPMediaMaxAdapterFan"),
-                .target(name: "AppLovinMediationFacebookAdapter"),
-                .product(name: "FBAudienceNetwork", package: "FBAudienceNetwork"),
+                .product(name: "AppLovinMediationFacebookAdapter", package: "AppLovin-MAX-Swift-Package-Meta"),
             ],
             path: "Sources",
         ),
         .binaryTarget(
             name: "REVUPMediaMaxAdapterFan",
-            url: "https://github.com/revup-tnk/REVUP-iOS-SDK/releases/download/1.1.0/REVUPMediaMaxAdapterFan.zip",
-            checksum: "ebb36030b0e2aa413cb829f15c2b732c2966f1ec8b6f06f52ff61332de83839d"
+            url: "https://github.com/revup-tnk/REVUP-iOS-SDK/releases/download/1.2.0/REVUPMediaMaxAdapterFan.zip",
+            checksum: "798f245f28bacea226d69bfa66fd6b960767d7b7662e9b3fdc12eb3c66af42b9"
         ),
-        .binaryTarget(
-            name: "AppLovinMediationFacebookAdapter",
-            url: "https://artifacts.applovin.com/ios/com/applovin/mediation/facebook-adapter/AppLovinMediationFacebookAdapter-6.21.1.0.zip",
-            checksum: "69069f3c153a9387a355a2e4e9ed322bcc4fcec7b0f5bc80fa9880e9c69c1ccb"
-        )
     ]
 )
